@@ -9,3 +9,9 @@ A plataforma busca democratizar o acesso à educação, facilitando a aquisiçã
 
 ![image](https://github.com/user-attachments/assets/16f796c7-9b30-4bfa-8ccb-3437a1aaf62e)
 ##
+
+- Matrículas
+
+![image](https://github.com/user-attachments/assets/88e91dfd-fbbf-45c3-a797-13918ee6cfd6)
+
+##
