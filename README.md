@@ -20,3 +20,11 @@ A plataforma busca democratizar o acesso à educação, facilitando a aquisiçã
 
 ![image](https://github.com/user-attachments/assets/448cfd3a-7b03-4018-b7eb-03d6985cf106)
 
+##
+
+- Trilha
+  
+![image](https://github.com/user-attachments/assets/b720ca81-2f41-4614-b4bc-fc2daf15f16e)
+
+
+
