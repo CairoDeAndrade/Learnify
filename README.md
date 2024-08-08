@@ -26,5 +26,10 @@ A plataforma busca democratizar o acesso à educação, facilitando a aquisiçã
   
 ![image](https://github.com/user-attachments/assets/b720ca81-2f41-4614-b4bc-fc2daf15f16e)
 
+##
+
+- Aula
+
+![image](https://github.com/user-attachments/assets/68f6b28b-f5a6-44c0-b2e1-6be5f470da82)
 
 
