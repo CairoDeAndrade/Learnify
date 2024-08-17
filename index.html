@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="/css/login.css" />
+    <link rel="stylesheet" href="/components/login/login.css" />
 
     <!-- Roboto font -->
-    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="common/common.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,7 +36,7 @@
           placeholder="Password"
         />
 
-        <button type="submit" class="primary-button roboto-medium">
+        <button type="submit" class="primary-button roboto-medium" onclick="login(event)">
           Entrar
         </button>
 
@@ -46,6 +46,6 @@
       </form>
     </main>
 
-    <script src="login.js"></script>
+    <script src="components/login/login-service.js"></script>
   </body>
 </html>
