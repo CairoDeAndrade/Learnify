@@ -1,0 +1,51 @@
+.container {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.container > .form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 50%;
+  height: 50%;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form > h1 {
+    margin-bottom: 2%;
+}
+
+.form > input {
+    height: 50px;
+    width: 70%;
+    border-radius: 7px;
+    padding: 15px;
+    margin-bottom: 15px;
+
+    font-size: medium;
+} 
+
+.form > .primary-button {
+    margin-top: 15px;
+
+    height: 50px;
+    width: 40%;
+    font-size: medium;
+}
+
+.form > .info {
+    margin-top: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+}
