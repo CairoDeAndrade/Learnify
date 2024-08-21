@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learnify</title>
+    <link
+      rel="icon"
+      href="/assets/images/education-technology.png"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="/components/classroom/classroom.css" />
+
+    <!-- Roboto font -->
+    <link rel="stylesheet" href="/common/common.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="toolbar primary-color">
+      <h3 class="roboto-black">Learnify</h3>
+      <div class="user-info">
+        <span id="username"></span>
+        <img src="/assets/images/user.png" alt="User photo" />
+      </div>
+    </header>
+    <main class="container">
+      <div class="classroom primary-color">
+        <div class="info">
+          <h3 class="roboto-black">Bootcamp Tal de tal</h3>
+          <p class="warn-font">Suporte disponível até 20/10/2024</p>
+        </div>
+        <img src="/assets/images/computer.png" alt="image">
+        <p class="percentage">0% completo</p>
+      </div>
+      <div class="classroom primary-color">
+        <div class="info">
+          <h3 class="roboto-black">Bootcamp Tal de tal</h3>
+          <p class="warn-font">Suporte disponível até 20/10/2024</p>
+        </div>
+        <img src="/assets/images/computer.png" alt="image">
+        <p class="percentage">0% completo</p>
+      </div>
+      <div class="classroom primary-color">
+        <div class="info">
+          <h3 class="roboto-black">Bootcamp Tal de tal</h3>
+          <p class="warn-font">Suporte disponível até 20/10/2024</p>
+        </div>
+        <img src="/assets/images/computer.png" alt="image">
+        <p class="percentage">0% completo</p>
+      </div>
+      <div class="classroom primary-color">
+        <div class="info">
+          <h3 class="roboto-black">Bootcamp Tal de tal</h3>
+          <p class="warn-font">Suporte disponível até 20/10/2024</p>
+        </div>
+        <img src="/assets/images/computer.png" alt="image">
+        <p class="percentage">0% completo</p>
+      </div>
+    </main>
+
+    <!-- JS -->
+    <script src="/services/login-service.js"></script>
+    <script src="/services/classroom-service.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", getStudentUsername(event));
+    </script>
+  </body>
+</html>
