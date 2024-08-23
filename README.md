@@ -3,6 +3,7 @@ Learnify visa fornecer uma plataforma de aprendizado online acessível e flexív
 O objetivo é capacitar os usuários com habilidades práticas e teóricas através de uma experiência de aprendizado interativa e personalizada, adaptada às suas necessidades e ritmos individuais.
 A plataforma busca democratizar o acesso à educação, facilitando a aquisição de novas competências e o desenvolvimento pessoal e profissional de forma conveniente e eficaz.
 
+Link de acesso à aplicação: https://cairodeandrade.github.io/Learnify/
 ## Design
 
 - Login
