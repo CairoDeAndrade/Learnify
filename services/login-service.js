@@ -17,9 +17,10 @@ function validateUserCredentials(username, password) {
 }
 
 function redirectTo(path) {
-    const baseURL = window.location.origin;
-    window.location.href = `${baseURL}${path}`;
+    const repoName = 'Learnify';
+    window.location.href = `/${repoName}${path}`;
 }
+
 
 
 function storeLoginData(user) {
