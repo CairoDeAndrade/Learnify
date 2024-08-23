@@ -17,8 +17,10 @@ function validateUserCredentials(username, password) {
 }
 
 function redirectTo(path) {
-    window.location.href = path;
+    const baseURL = window.location.origin;
+    window.location.href = `${baseURL}${path}`;
 }
+
 
 function storeLoginData(user) {
     sessionStorage.setItem('logged', 'true');
