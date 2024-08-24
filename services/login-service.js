@@ -17,11 +17,10 @@ function validateUserCredentials(username, password) {
 }
 
 function redirectTo(path) {
-    const repoName = 'Learnify';
-    window.location.href = `/${repoName}${path}`;
+    // const repoName = 'Learnify';
+    // window.location.href = `/${repoName}${path}`;
+    window.location.href = path;
 }
-
-
 
 function storeLoginData(user) {
     sessionStorage.setItem('logged', 'true');

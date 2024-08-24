@@ -9,7 +9,8 @@ function getStudentUsername() {
         document.getElementById("username").textContent = username;
     } else {
         alert("Usuário não logado. Redirecionando para a página de login.");
-        window.location.href = "/index.html";
+        // window.location.href = "/index.html";
+        window.location.href = "index.html";
     }
 }
 
@@ -55,7 +56,11 @@ function renderClassrooms(classrooms) {
         infoDiv.appendChild(supportDate);
 
         const img = document.createElement('img');
-        img.src = "/assets/images/computer.png"; 
+        
+        // Githubpages
+        img.src = "/Learnify/assets/images/computer.png";
+
+        // img.src = "/assets/images/computer.png"; 
         img.alt = "image";
 
         const percentage = document.createElement('p');
