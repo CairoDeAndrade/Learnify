@@ -17,9 +17,9 @@ function validateUserCredentials(username, password) {
 }
 
 function redirectTo(path) {
-    // const repoName = 'Learnify';
-    // window.location.href = `/${repoName}${path}`;
-    window.location.href = path;
+    const repoName = 'Learnify';
+    window.location.href = `/${repoName}${path}`;
+    // window.location.href = path;
 }
 
 function storeLoginData(user) {
