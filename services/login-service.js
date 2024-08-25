@@ -16,13 +16,17 @@ function validateUserCredentials(username, password) {
     }
 }
 
-function redirectTo(path) {
-    const repoName = 'Learnify';
-    window.location.href = `/${repoName}${path}`;
-    // window.location.href = path;
-}
-
 function storeLoginData(user) {
     sessionStorage.setItem('logged', 'true');
     sessionStorage.setItem('user', user);
+}
+
+function getStudentUsername() {
+    const username = sessionStorage.getItem("user");
+    if (username) {
+        document.getElementById("username").textContent = username;
+    } else {
+        alert("Usuário não logado. Redirecionando para a página de login.");
+        window.location.href = "index.html";
+    }
 }

@@ -3,21 +3,10 @@ document.addEventListener("DOMContentLoaded", function() {
     loadClassrooms();
 });
 
-function getStudentUsername() {
-    const username = sessionStorage.getItem("user");
-    if (username) {
-        document.getElementById("username").textContent = username;
-    } else {
-        alert("Usuário não logado. Redirecionando para a página de login.");
-        // window.location.href = "/index.html";
-        window.location.href = "index.html";
-    }
-}
+const API_URL = "https://65d8cad7c96fbb24c1bc5095.mockapi.io/api/v1/classrooms";
 
 function loadClassrooms() {
-    const apiUrl = "https://65d8cad7c96fbb24c1bc5095.mockapi.io/api/v1/classrooms";
-
-    fetch(apiUrl)
+    fetch(API_URL)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erro ao buscar as turmas');
@@ -41,6 +30,13 @@ function renderClassrooms(classrooms) {
         const classroomDiv = document.createElement('div');
         classroomDiv.classList.add('classroom', 'primary-color');
 
+        classroomDiv.setAttribute('data-id', classroom.id);
+
+        classroomDiv.addEventListener('click', function() {
+            const classroomId = this.getAttribute('data-id');
+            redirectTo('/components/classroom-details/classroom-details.html', classroomId);
+        });
+
         const infoDiv = document.createElement('div');
         infoDiv.classList.add('info');
 
@@ -56,11 +52,9 @@ function renderClassrooms(classrooms) {
         infoDiv.appendChild(supportDate);
 
         const img = document.createElement('img');
-        
         // Githubpages
-        img.src = "/Learnify/assets/images/computer.png";
-
-        // img.src = "/assets/images/computer.png"; 
+        // img.src = "/Learnify/assets/images/computer.png";
+        img.src = "/assets/images/computer.png";
         img.alt = "image";
 
         const percentage = document.createElement('p');
