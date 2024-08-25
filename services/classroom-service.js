@@ -52,9 +52,13 @@ function renderClassrooms(classrooms) {
         infoDiv.appendChild(supportDate);
 
         const img = document.createElement('img');
-        // Githubpages
-        // img.src = "/Learnify/assets/images/computer.png";
-        img.src = "/assets/images/computer.png";
+        
+        // Github pages
+        img.src = "/Learnify/assets/images/computer.png";
+
+        // Local
+        // img.src = "/assets/images/computer.png";
+
         img.alt = "image";
 
         const percentage = document.createElement('p');
