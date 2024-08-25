@@ -30,5 +30,15 @@ function getClassroomById() {
 }
 
 function renderClassroomDetails(classroom) {
-    console.log(classroom);
+    const studyTrackTitleElement = document.querySelector('#study-track .info h3');
+
+    if (studyTrackTitleElement) {
+        studyTrackTitleElement.textContent = classroom.studyTrack.title;
+    }
+
+    const percentageElement = document.querySelector('#study-track .percentage');
+    if (percentageElement) {
+        percentageElement.textContent = `${classroom.completePercentage}% completo`;
+    }
 }
+
