@@ -9,9 +9,9 @@ function redirectTo(path) {
 
 function redirectTo(path, id) {
     // GitHub pages
-    const repoName = 'Learnify';
-    window.location.href = `/${repoName}${path}?id=${id}`;
+    // const repoName = 'Learnify';
+    // window.location.href = `/${repoName}${path}?id=${id}`;
 
     // Local
-    // window.location.href = `${path}?id=${id}`;
+    window.location.href = `${path}?id=${id}`;
 }
