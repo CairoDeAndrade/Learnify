@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const API_URL = "https://65d8cad7c96fbb24c1bc5095.mockapi.io/api/v1/classrooms";
 let classroomId;
+let trackId;
 
 function getClassroomById() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -41,8 +42,10 @@ function renderClassroomDetails(classroom) {
     if (percentageElement) {
         percentageElement.textContent = `${classroom.completePercentage}% completo`;
     }
+
+    trackId = classroom.studyTrack.id;
 }
 
 function redirectToStudyTrack(path) {
-    redirectTo(path, classroomId);
+    redirectTo(path, trackId);
 }
