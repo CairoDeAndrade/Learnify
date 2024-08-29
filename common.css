@@ -15,6 +15,10 @@ body {
     background-color: #242526;
 }
 
+.secondary-color {
+  background-color: #3A3B3C;
+}
+
 .primary-button {
     background-color: #2D88FF;
     border-radius: 5px;
