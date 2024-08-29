@@ -1,42 +1,63 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    background-color: #18191A;
-    color: #D8DADF;
+  font-family: "Roboto", sans-serif;
+  background-color: #18191a;
+  color: #d8dadf;
 }
 
 /* Common */
 .primary-color {
-    background-color: #242526;
+  background-color: #242526;
+}
+
+.secondary-color {
+  background-color: #3a3b3c;
 }
 
 .primary-button {
-    background-color: #2D88FF;
-    border-radius: 5px;
-    border: none;
-    color: #D8DADF;
-    cursor: pointer;
+  background-color: #2d88ff;
+  border-radius: 5px;
+  border: none;
+  color: #d8dadf;
+  cursor: pointer;
 }
 
 .primary-button:hover {
   background-color: #146fe6;
 }
 
+.primary-button:disabled {
+  background-color: #d3d3d3;
+  color: #a9a9a9;
+  cursor: not-allowed;
+}
+
 .input {
-    background-color: #ededed;
-    color: #161515;
-    border: none;
+  background-color: #ededed;
+  color: #161515;
+  border: none;
+}
+
+.input:disabled {
+  background-color: #d3d3d3;
+  color: #a9a9a9;
+  cursor: not-allowed;
 }
 
 .warn-font {
-    color: #E2DB2B;
+  color: #e2db2b;
 }
 
+.success-font {
+  color: green;
+}
+
+/* Toobar */
 .toolbar {
   width: 100%;
   height: 70px;
@@ -47,63 +68,83 @@ body {
   align-items: center;
 }
 
+.toolbar > .user-info {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+header > .user-info > img {
+  width: 40px;
+  height: 40px;
+
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Card */
+.container > .card:hover {
+  background-color: #2e2f30;
+  transform: scale(1.01);
+}
+
 /* Roboto fonts styles */
 .roboto-thin {
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  .roboto-light {
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .roboto-regular {
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .roboto-medium {
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .roboto-bold {
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .roboto-black {
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  .roboto-thin-italic {
-    font-weight: 100;
-    font-style: italic;
-  }
-  
-  .roboto-light-italic {
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .roboto-regular-italic {
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .roboto-medium-italic {
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .roboto-bold-italic {
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  .roboto-black-italic {
-    font-weight: 900;
-    font-style: italic;
-  }
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-weight: 900;
+  font-style: italic;
+}
