@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", function () {
+    getStudentUsername();
+    getVideoClassesByStudyTrack();
+});
+
 function getVideoClassesByStudyTrack() {
     const urlParams = new URLSearchParams(window.location.search);
     const trackId = urlParams.get('id');
@@ -11,8 +16,8 @@ function getVideoClassesByStudyTrack() {
                 return response.json();
             })
             .then(data => {
-                renderVideoClasses(data.videoClasses);  
-                renderChallenge(data.challenge); 
+                renderVideoClasses(data.videoClasses);
+                renderChallenge(data.challenge);
             })
             .catch(error => {
                 console.error("Erro:", error);
@@ -29,23 +34,23 @@ function renderVideoClasses(videoClasses) {
     videoClasses.forEach(videoClass => {
         const card = document.createElement('div');
         card.className = 'card primary-color';
-        
+
         const title = document.createElement('h3');
         title.className = 'roboto-black';
         title.textContent = `${videoClass.sequence}. ${videoClass.title}`;
-        
+
         const doneDiv = document.createElement('div');
         doneDiv.className = 'done';
-        
+
         if (!videoClass.done) {
             doneDiv.classList.add('warn-font');
         } else {
             doneDiv.classList.add('success-font');
         }
-        
+
         const doneText = document.createElement('p');
         doneText.textContent = videoClass.done ? 'Concluído' : 'Pendente';
-        
+
         doneDiv.appendChild(doneText);
         card.appendChild(title);
         card.appendChild(doneDiv);
@@ -65,12 +70,12 @@ function renderChallenge(challenge) {
 
     const descriptionDiv = document.createElement('div');
     descriptionDiv.className = 'desc secondary-color';
-    
+
     const descriptionTitle = document.createElement('h4');
     descriptionTitle.className = 'roboto-black';
     descriptionTitle.textContent = 'Descrição';
     descriptionDiv.appendChild(descriptionTitle);
-    
+
     const descriptionText = document.createElement('p');
     descriptionText.textContent = challenge.description;
     descriptionDiv.appendChild(descriptionText);
@@ -80,7 +85,7 @@ function renderChallenge(challenge) {
     // Challenge status
     const deliverDiv = document.createElement('div');
     deliverDiv.className = 'deliver';
-    
+
     const card = document.createElement('div');
     card.className = 'card secondary-color';
 
@@ -91,9 +96,9 @@ function renderChallenge(challenge) {
 
     const statusDiv = document.createElement('div');
     statusDiv.className = 'link';
-    
+
     const statusText = document.createElement('h2');
-    statusText.className = 'warn-font';
+    statusText.className = 'warn-font status'; 
     statusText.textContent = challenge.status === 'PENDING' ? 'Pendente' : 'Concluído';
     statusDiv.appendChild(statusText);
 
@@ -119,6 +124,8 @@ function renderChallenge(challenge) {
     button.className = 'primary-button';
     button.textContent = 'Enviar';
 
+    button.addEventListener('click', () => sendChallenge(input, button));
+
     inputDiv.appendChild(input);
     inputDiv.appendChild(button);
 
@@ -130,6 +137,16 @@ function renderChallenge(challenge) {
     container.appendChild(challengeDiv);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    getVideoClassesByStudyTrack();
-});
+function sendChallenge(input, button) {
+    input.value = '';
+    input.disabled = true;
+    button.disabled = true;
+    button.classList.add('disabled');
+
+    const statusText = document.querySelector('.status'); 
+    if (statusText) {
+        statusText.classList.remove('warn-font');
+        statusText.textContent = 'Enviado';
+        statusText.style.color = '#2d88ff';
+    }
+}
