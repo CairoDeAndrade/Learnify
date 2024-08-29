@@ -54,10 +54,10 @@ function renderClassrooms(classrooms) {
         const img = document.createElement('img');
         
         // Github pages
-        // img.src = "/Learnify/assets/images/computer.png";
+        img.src = "/Learnify/assets/images/computer.png";
 
         // Local
-        img.src = "/assets/images/computer.png";
+        // img.src = "/assets/images/computer.png";
 
         img.alt = "image";
 
