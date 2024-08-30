@@ -1,6 +1,10 @@
+const urlParams = new URLSearchParams(window.location.search);
+const trackId = urlParams.get('id');
+
 document.addEventListener("DOMContentLoaded", function () {
-    getStudentUsername();
     getVideoClassesByStudyTrack();
+    getStudentUsername();
+    checkChallengeStatus();
 });
 
 function getVideoClassesByStudyTrack() {
@@ -34,6 +38,10 @@ function renderVideoClasses(videoClasses) {
     videoClasses.forEach(videoClass => {
         const card = document.createElement('div');
         card.className = 'card primary-color';
+        
+        card.onclick = function() {
+            redirectToVideoClass('/components/video-class/video-class.html', trackId, videoClass.id);
+        };
 
         const title = document.createElement('h3');
         title.className = 'roboto-black';
@@ -98,14 +106,13 @@ function renderChallenge(challenge) {
     statusDiv.className = 'link';
 
     const statusText = document.createElement('h2');
-    statusText.className = 'warn-font status'; 
+    statusText.className = 'warn-font status';
     statusText.textContent = challenge.status === 'PENDING' ? 'Pendente' : 'Concluído';
     statusDiv.appendChild(statusText);
 
     card.appendChild(statusDiv);
     deliverDiv.appendChild(card);
 
-    // Challenge deliver link
     const linkDiv = document.createElement('div');
     linkDiv.className = 'card secondary-color';
 
@@ -124,7 +131,7 @@ function renderChallenge(challenge) {
     button.className = 'primary-button';
     button.textContent = 'Enviar';
 
-    button.addEventListener('click', () => sendChallenge(input, button));
+    button.addEventListener('click', () => sendChallenge(input, button, statusText));
 
     inputDiv.appendChild(input);
     inputDiv.appendChild(button);
@@ -135,18 +142,51 @@ function renderChallenge(challenge) {
     challengeDiv.appendChild(deliverDiv);
 
     container.appendChild(challengeDiv);
+
+    if (challenge.status === 'PENDING') {
+        localStorage.setItem('challenge', 'PENDING');
+    } else if (challenge.status === 'DONE') {
+        localStorage.setItem('challenge', 'DONE');
+        updateChallengeUI(input, button, statusText, 'DONE');
+    }
 }
 
-function sendChallenge(input, button) {
+function sendChallenge(input, button, statusText) {
     input.value = '';
     input.disabled = true;
     button.disabled = true;
     button.classList.add('disabled');
 
-    const statusText = document.querySelector('.status'); 
-    if (statusText) {
-        statusText.classList.remove('warn-font');
-        statusText.textContent = 'Enviado';
-        statusText.style.color = '#2d88ff';
+    statusText.classList.remove('warn-font');
+    statusText.textContent = 'Enviado';
+    statusText.style.color = '#2d88ff';
+
+    localStorage.setItem('challenge', 'SENT');
+}
+
+function checkChallengeStatus() {
+    const challengeStatus = localStorage.getItem('challenge');
+    if (challengeStatus === 'SENT') {
+        const input = document.getElementById('github-link');
+        const button = document.querySelector('.primary-button');
+        const statusText = document.querySelector('.status');
+
+        if (input && button && statusText) {
+            updateChallengeUI(input, button, statusText, 'SENT');
+        }
+    }
+}
+
+function updateChallengeUI(input, button, statusText, status) {
+    if (input && button && statusText) {
+        input.disabled = true;
+        button.disabled = true;
+        button.classList.add('disabled');
+
+        if (status === 'SENT') {
+            statusText.classList.remove('warn-font');
+            statusText.textContent = 'Enviado';
+            statusText.style.color = '#2d88ff';
+        }
     }
 }
