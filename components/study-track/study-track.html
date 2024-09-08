@@ -1,56 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="pt-BR">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learnify</title>
 
-    <!-- GithubPages -->
     <link
       rel="icon"
-      href="/Learnify/assets/images/education-technology.png"
+      href="../../assets/images/education-technology.png"
       type="image/png"
     />
-    <link rel="stylesheet" href="/Learnify/common.css" />
-
-    <!-- Local -->
-    <!-- <link
-      rel="icon"
-      href="/assets/images/education-technology.png"
-      type="image/png"
-    />
-    <link rel="stylesheet" href="/common.css" /> -->
-
+    <link rel="stylesheet" href="../../common.css" />
     <link rel="stylesheet" href="study-track.css" />
+  </head>
+  <body>
+    <main class="container"></main>
 
-    <!-- Roboto font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap"
-      rel="stylesheet"
-    />
-</head>
-<body>
-    <header class="toolbar primary-color">
-        <h3 class="roboto-black">Learnify</h3>  
-        <div class="user-info">
-            <span id="username"></span>
-            <!-- <img src="/assets/images/user.png" alt="User photo" /> -->
-            <img src="/Learnify/assets/images/user.png" alt="User photo" />
-        </div>
-    </header>
-    <main class="container">
-    </main>
-
-    <!-- JS -->
-    <!-- <script src="/services/login-service.js"></script>
-    <script src="/services/study-track-service.js"></script>
-    <script src="/services/routing-service.js"></script> -->
-
-    <!-- Github pages -->
-    <script src="/Learnify/services/login-service.js"></script>
-    <script src="/Learnify/services/study-track-service.js"></script>  
-    <script src="/Learnify/services/routing-service.js"></script>
-</body>
+    <script src="../../loaders/loader-header.js"></script>
+    <!-- <script src="../../loaders/loader-font.js"></script> -->
+    <script src="../../appState.js"></script>
+    <script src="../../services/login-service.js"></script>
+    <script src="../../services/study-track-service.js"></script>
+    <script src="../../services/routing-service.js"></script>
+  </body>
 </html>

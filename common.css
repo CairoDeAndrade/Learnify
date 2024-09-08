@@ -6,64 +6,65 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #18191a;
-  color: #d8dadf;
+  background-color: #000000;
+  color: #39ff14;
 }
 
-/* Common */
 .primary-color {
-  background-color: #242526;
+  background-color: #1e1e1e;
 }
 
 .secondary-color {
-  background-color: #3a3b3c;
+  background-color: #2b2b2b;
 }
 
 .primary-button {
-  background-color: #2d88ff;
+  background-color: #ff007f;
   border-radius: 5px;
   border: none;
-  color: #d8dadf;
+  color: #ffffff;
   cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 0, 127, 0.8);
 }
 
 .primary-button:hover {
-  background-color: #146fe6;
+  background-color: #e6007f;
+  box-shadow: 0 0 15px rgba(255, 0, 127, 1);
 }
 
 .primary-button:disabled {
-  background-color: #d3d3d3;
-  color: #a9a9a9;
+  background-color: #b3b3b3;
+  color: #7f7f7f;
   cursor: not-allowed;
 }
 
 .input {
-  background-color: #ededed;
-  color: #161515;
-  border: none;
+  background-color: #1e1e1e;
+  color: #39ff14;
+  border: 2px solid #39ff14;
 }
 
 .input:disabled {
-  background-color: #d3d3d3;
-  color: #a9a9a9;
+  background-color: #2b2b2b;
+  color: #7f7f7f;
   cursor: not-allowed;
 }
 
 .warn-font {
-  color: #e2db2b;
+  color: #f5f500;
 }
 
 .success-font {
-  color: green;
+  color: #00ff00;
 }
 
-/* Toobar */
 .toolbar {
   width: 100%;
   height: 70px;
   margin-bottom: 30px;
   padding: 15px;
-
+  background-color: #1e1e1e;
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.8);
   display: flex;
   align-items: center;
 }
@@ -77,18 +78,18 @@ body {
 header > .user-info > img {
   width: 40px;
   height: 40px;
-
   margin-left: 10px;
   cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.8);
 }
 
-/* Card */
 .container > .card:hover {
-  background-color: #2e2f30;
-  transform: scale(1.01);
+  background-color: #2b2b2b;
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(0, 204, 255, 0.89);
 }
 
-/* Roboto fonts styles */
 .roboto-thin {
   font-weight: 100;
   font-style: normal;
@@ -147,4 +148,14 @@ header > .user-info > img {
 .roboto-black-italic {
   font-weight: 900;
   font-style: italic;
+}
+
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.link:hover{
+  color:  rgb(196, 196, 196);
 }
