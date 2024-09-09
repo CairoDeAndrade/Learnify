@@ -1,26 +1,35 @@
-function redirectTo(path) {
-    // GitHub pages
-    const repoName = 'Learnify';
-    window.location.href = `/${repoName}${path}`; 
+const appState = {
+  isDevelopment: true,
+  routePath: "",
+  repoName: "Learnify",
+};
 
-    // Local 
-    // window.location.href = path;
+function redirectTo(path) {
+  if (appState.isDevelopment) {
+    // Local
+    window.location.href = path;
+  } else {
+    // GitHub pages
+    window.location.href = `/${appState.repoName}${path}`;
+  }
 }
 
 function redirectTo(path, id) {
-    // GitHub pages
-    const repoName = 'Learnify';
-    window.location.href = `/${repoName}${path}?id=${id}`;
-
+  if (appState.isDevelopment) {
     // Local
-    // window.location.href = `${path}?id=${id}`;
+    window.location.href = `${path}?id=${id}`;
+  } else {
+    // GitHub pages
+    window.location.href = `/${appState.repoName}${path}?id=${id}`;
+  }
 }
 
 function redirectToVideoClass(path, trackId, videoClassId) {
-    // GitHub pages
-    const repoName = 'Learnify';
-    window.location.href = `/${repoName}${path}?trackId=${trackId}&videoClassId=${videoClassId}`;
-
+  if (appState.isDevelopment) {
     // Local
-    // window.location.href = `${path}?trackId=${trackId}&videoClassId=${videoClassId}`;
+    window.location.href = `${path}?trackId=${trackId}&videoClassId=${videoClassId}`;
+  } else {
+    // GitHub pages
+    window.location.href = `/${appState.repoName}${path}?trackId=${trackId}&videoClassId=${videoClassId}`;
+  }
 }
