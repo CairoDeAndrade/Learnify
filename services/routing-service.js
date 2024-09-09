@@ -5,7 +5,7 @@ const appState = {
 };
 
 function redirectTo(path) {
-  if (appState.isDevelopment) {
+  if (isDevelopment()) {
     // Local
     window.location.href = path;
   } else {
@@ -15,7 +15,7 @@ function redirectTo(path) {
 }
 
 function redirectTo(path, id) {
-  if (appState.isDevelopment) {
+  if (isDevelopment()) {
     // Local
     window.location.href = `${path}?id=${id}`;
   } else {
@@ -25,7 +25,7 @@ function redirectTo(path, id) {
 }
 
 function redirectToVideoClass(path, trackId, videoClassId) {
-  if (appState.isDevelopment) {
+  if (isDevelopment()) {
     // Local
     window.location.href = `${path}?trackId=${trackId}&videoClassId=${videoClassId}`;
   } else {
