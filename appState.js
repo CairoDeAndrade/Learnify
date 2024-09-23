@@ -1,4 +1,4 @@
-const isDevelopmentEnviroment = false;
+const isDevelopmentEnviroment = true;
 
 function isDevelopment() {
   return isDevelopmentEnviroment;

@@ -1,0 +1,15 @@
+{
+  "name": "learnify",
+  "version": "1.0.0",
+  "description": "Learnify visa fornecer uma plataforma de aprendizado online acessível e flexível, oferecendo cursos de alta qualidade em diversas áreas de conhecimento.\r O objetivo é capacitar os usuários com habilidades práticas e teóricas através de uma experiência de aprendizado interativa e personalizada, adaptada às suas necessidades e ritmos individuais.\r A plataforma busca democratizar o acesso à educação, facilitando a aquisição de novas competências e o desenvolvimento pessoal e profissional de forma conveniente e eficaz.",
+  "main": "appState.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.14.2"
+  }
+}
